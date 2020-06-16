@@ -23,6 +23,7 @@
 
                                 <v-text-field
                                         v-model="password"
+                                        :rules="passwordRules"
                                         label="Password"
                                         required
                                         prepend-icon="mdi-lock"
@@ -54,6 +55,11 @@
                 return [
                     v => !!v || 'E-mail is required',
                     v => /.+@.+\..+/.test(v) || 'E-mail must be valid',
+                ]
+            },
+            passwordRules() {
+                return [
+                    v => !!v || 'Password is required',
                 ]
             },
         },
