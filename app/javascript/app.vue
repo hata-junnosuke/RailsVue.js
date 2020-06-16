@@ -5,7 +5,7 @@
             app
     >
       <v-list dense>
-        <v-list-item link>
+        <v-list-item to="/" link>
           <v-list-item-action>
             <v-icon>mdi-home</v-icon>
           </v-list-item-action>
@@ -13,12 +13,20 @@
             <v-list-item-title>Home</v-list-item-title>
           </v-list-item-content>
         </v-list-item>
-        <v-list-item link>
+        <v-list-item link v-if="$store.getters['auth/currentUser']">
           <v-list-item-action>
-            <v-icon>mdi-email</v-icon>
+            <v-icon>mdi-account</v-icon>
           </v-list-item-action>
           <v-list-item-content>
-            <v-list-item-title>Contact</v-list-item-title>
+            <v-list-item-title @click="logout">ログアウト</v-list-item-title>
+          </v-list-item-content>
+        </v-list-item>
+        <v-list-item to="login" link v-else>
+          <v-list-item-action>
+            <v-icon>mdi-account</v-icon>
+          </v-list-item-action>
+          <v-list-item-content>
+            <v-list-item-title>ログイン</v-list-item-title>
           </v-list-item-content>
         </v-list-item>
       </v-list>
@@ -65,5 +73,12 @@
     data: () => ({
       drawer: null,
     }),
+    methods: {
+      logout() {
+        if (confirm("ログアウトしますか？")) {
+          this.$store.dispatch('auth/logout')
+        }
+      }
+    }
   }
 </script>
