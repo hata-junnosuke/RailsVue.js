@@ -21,7 +21,7 @@
             <v-list-item-title @click="logout">ログアウト</v-list-item-title>
           </v-list-item-content>
         </v-list-item>
-        <v-list-item to="login" link v-else>
+        <v-list-item to="/login" link v-else>
           <v-list-item-action>
             <v-icon>mdi-account</v-icon>
           </v-list-item-action>

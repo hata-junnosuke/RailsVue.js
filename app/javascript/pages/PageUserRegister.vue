@@ -112,7 +112,7 @@
                                 password_confirmation: this.passwordConfirmation
                             }
                         })
-                        this.$router.push(`login`)
+                        this.$router.push(`/login`)
                     } catch(err) {
                         alert(err.response.data.error.messages)
                     }
