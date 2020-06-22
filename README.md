@@ -1,24 +1,14 @@
-# README
+【基本的なCRUD】
+[![Image from Gyazo](https://i.gyazo.com/f2345a912d03b8d36db8edce361237d0.gif)](https://gyazo.com/f2345a912d03b8d36db8edce361237d0)
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
 
-Things you may want to cover:
+【インクリメンタルサーチ】
+[![Image from Gyazo](https://i.gyazo.com/20f0abf56774920a9906ebd3bbd3bee8.gif)](https://gyazo.com/20f0abf56774920a9906ebd3bbd3bee8)
 
-* Ruby version
+【画像のトリミング&アップロード】
+[![Image from Gyazo](https://i.gyazo.com/c622eb8b97d28daf73befb667fc070a4.gif)](https://gyazo.com/c622eb8b97d28daf73befb667fc070a4)
 
-* System dependencies
+【タグの登録】
+[![Image from Gyazo](https://i.gyazo.com/e923beaa23e633b435633eb79fba1298.gif)](https://gyazo.com/e923beaa23e633b435633eb79fba1298)
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+その他諸々
