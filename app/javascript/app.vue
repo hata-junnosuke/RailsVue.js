@@ -41,6 +41,7 @@
       <v-toolbar-title>Application</v-toolbar-title>
     </v-app-bar>
 
+    <!-- routerでmainを切り替えている -->
     <v-main>
       <router-view></router-view>
     </v-main>
