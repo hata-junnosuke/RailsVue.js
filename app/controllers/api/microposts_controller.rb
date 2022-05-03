@@ -3,7 +3,7 @@ class Api::MicropostsController < ApplicationController
 
   def index
     microposts = Micropost.includes(:user).order(created_at: :desc)
-    render json: microposts, each_serializer: MicropostSerializer
+    render json: microposts, each_serializer: MicropostSerializer   #複数のデータを受け取りたい時はeach_serializer
   end
 
   def create
