@@ -1,0 +1,35 @@
+<template>
+    <div>
+        <v-list-item
+                @click=""
+        >
+            <v-list-item-avatar>
+                <v-img src="https://picsum.photos/80/80/?random"></v-img>
+            </v-list-item-avatar>
+
+            <v-list-item-content>
+                <v-list-item-title v-html="micropost.user.name"></v-list-item-title>
+                <v-list-item-subtitle style="white-space: pre-line" v-html="micropost.content"></v-list-item-subtitle>
+            </v-list-item-content>
+            <v-list-item-action>
+                <!-- dayjsを使用 -->
+                <v-list-item-action-text v-text="$dayjs(micropost.created_at).format('YYYY-MM-DD HH:mm:ss')"></v-list-item-action-text>
+            </v-list-item-action>
+        </v-list-item>
+        <v-divider
+                :inset="true"
+        ></v-divider>
+    </div>
+
+</template>
+<script>
+    export default {
+        //親からの値をpropsで受け取る。
+        props: {
+            micropost: {
+                type: Object,
+                required: true
+            }
+        }
+    }
+</script>
