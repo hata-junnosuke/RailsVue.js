@@ -9,6 +9,7 @@
     "axios": "^0.19.2",
     "dayjs": "^1.11.1",
     "vue": "^2.6.11",
+    "vue-image-crop-upload": "^3.0.3",
     "vue-loader": "^15.9.2",
     "vue-router": "^3.3.4",
     "vue-template-compiler": "^2.6.11",

@@ -33,6 +33,10 @@ const actions = {
     logout({ commit }) {
         commit("CLEAR_CURRENT_USER");
     },
+    async updateProfile({ commit, state }, userParams) {
+        const res = await axios.patch(`/api/me/account`, userParams)
+        commit("SET_CURRENT_USER", { ...res.data.user, ...{ token: state.currentUser.token } });
+    },
 };
 
 //大元のルートstore/index.jsと接続する
